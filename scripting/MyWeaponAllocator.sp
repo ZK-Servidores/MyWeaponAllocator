@@ -762,7 +762,7 @@ void Menu_Secondary(int client)
 
 	if (gc_bRevolver.BoolValue)
 	{
-		menu.AddItem("weapon_revolver", "Revolver");
+		menu.AddItem("weapon_revolver", "R8 Revolver");
 	}
 
 	menu.AddItem("weapon_cz75a", "CZ75-Auto");
@@ -799,12 +799,12 @@ void Menu_SMG(int client)
 	{
 		Format(sBuffer, sizeof(sBuffer), "%t\n", "Select a CT SMG");
 		menu.AddItem("weapon_mp9", "MP9");
-		menu.AddItem("weapon_mag7", "Mag-7");
+		menu.AddItem("weapon_mag7", "MAG-7");
 	}
 	else if (!g_bIsCT[client])
 	{
 		Format(sBuffer, sizeof(sBuffer), "%t\n", "Select a T SMG");
-		menu.AddItem("weapon_mac10", "Mac-10");
+		menu.AddItem("weapon_mac10", "MAC-10");
 		menu.AddItem("weapon_sawedoff", "Sawed-Off");
 	}
 
@@ -1648,7 +1648,7 @@ void DisablePlugin(char[] plugin)
 
 bool CanPriorityAWP(int client)
 {
-	return gc_bAwpPriority.BoolValue && CheckCommandAccess(client, "mywa_priority_awp", ADMFLAG_GENERIC);
+	return gc_bAwpPriority.BoolValue && CheckCommandAccess(client, "mywa_priority_awp", ADMFLAG_RESERVATION);
 }
 
 int GetWeaponPrice(char[] weapon)
