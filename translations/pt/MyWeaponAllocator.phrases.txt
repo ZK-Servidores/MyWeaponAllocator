@@ -25,7 +25,7 @@
 
 	"Full Buy Round"
 	{
-		"pt"		"Round Compra Full"
+		"pt"		"Round Full Compra"
 	}
 
 	"Rifle Round"
@@ -35,7 +35,7 @@
 
 	"Deagle Round"
 	{
-		"pt"		"Round Deagle"
+		"pt"		"Round Desert Eagle"
 	}
 
 	"Now is"
@@ -55,39 +55,48 @@
 
 	"Select a CT rifle"
 	{
-		"pt"		"Selecione um Rifle CT:"
+		"pt"		"Selecione Rifle de CT:"
 	}
 
 	"Select a T rifle"
 	{
-		"pt"		"Selecione um Rifle T:"
+		"pt"		"Selecione Rifle de T:"
 	}
 
 	"Select a CT pistol"
 	{
-		"pt"		"Selecione uma Pistol CT:"
+		"pt"		"Selecione Pistol de CT:"
 	}
 
 	"Select a T pistol"
 	{
-		"pt"		"Selecione uma Pistol T:"
+		"pt"		"Selecione Pistol de T:"
 	}
 
 	"Select a CT SMG"
 	{
-		"pt"		"Selecione uma SMG CT:"
+		"pt"		"Selecione SMG de CT:"
 	}
 
 	"Select a T SMG"
 	{
-		"pt"		"Selecione uma SMG T:"
+		"pt"		"Selecione SMG de T:"
 	}
 
 	"Allow Sniper"
 	{
-		"pt"		"Permita-se receber: \nSSG 08 na Compra Forçada e \nAWP na Compra Completa?"
+		"pt"		"Permita-se receber: \nSSG 08 na Compra Forçada e\nAWP na Full Compra?"
+	
+	"Allow Taser"
+	{
+		"pt"		"Permitir-se a receber Zeus x27?"
 	}
 
+	"Allow Xm1014"
+	{
+		"pt"		"Permitir-se receber XM1014?"
+	}
+	
 	"Yes"
 	{
 		"pt"		"Sim"
@@ -105,7 +114,7 @@
 
 	"Weapons next round"
 	{
-		"pt"		"Você receberá sua nova escolha de armas na próxima rodada."
+		"pt"		"Você receberá suas novas armas no próximo round."
 	}
 
 	"Round Type"
@@ -117,5 +126,4 @@
 	{
 		"pt"		"Você tem que estar em um time para escolher suas armas."
 	}
-
 }
