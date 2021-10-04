@@ -7,7 +7,6 @@
 //
 "Phrases"
 {
-
 	"Bomb planted on Bombsite"
 	{
 		"en"		"Bomb planted on bombsite:"
