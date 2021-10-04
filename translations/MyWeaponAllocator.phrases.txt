@@ -126,5 +126,4 @@
 	{
 		"en"		"You have to be on a team to choose your weapons."
 	}
-
 }
