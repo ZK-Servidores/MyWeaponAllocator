@@ -25,7 +25,7 @@
 
 	"Full Buy Round"
 	{
-		"pt"		"Round Compra Full"
+		"pt"		"Round Full Compra"
 	}
 
 	"Rifle Round"
@@ -35,7 +35,7 @@
 
 	"Deagle Round"
 	{
-		"pt"		"Round Deagle"
+		"pt"		"Round Desert Eagle"
 	}
 
 	"Now is"
@@ -105,7 +105,7 @@
 
 	"Weapons next round"
 	{
-		"pt"		"Você receberá sua nova escolha de armas na próxima rodada."
+		"pt"		"Você receberá suas nova armas no próximo round."
 	}
 
 	"Round Type"
