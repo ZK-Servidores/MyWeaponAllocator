@@ -19,4 +19,4 @@ The plugin will give equipments **(grenades, armor & kit)** in these rounds base
 Take a look at the configuration below for a better understanding.
 
 ## Credits
-- [href="https://github.com/LemonPAKA/" ](LemonPAKA) - Added Simplified Chinese Translation and taser, nova and xm1014 with the lastest version price;
+- [https://github.com/LemonPAKA/](LemonPAKA) - Added Simplified Chinese Translation and taser, nova and xm1014 with the lastest version price;
