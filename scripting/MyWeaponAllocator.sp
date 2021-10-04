@@ -862,7 +862,6 @@ public void Menu_Xm1014(int client)
 	menu.Display(client, MENU_TIME_FOREVER);
 }
 
-
 public int Handler_Primary(Menu menu, MenuAction action, int client, int selection)
 {
 	if (action == MenuAction_Select)

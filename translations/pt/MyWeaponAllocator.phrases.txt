@@ -85,6 +85,7 @@
 	"Allow Sniper"
 	{
 		"pt"		"Permita-se receber: \nSSG 08 na Compra Forçada e\nAWP na Full Compra?"
+	}
 	
 	"Allow Taser"
 	{
