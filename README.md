@@ -15,7 +15,5 @@ Player can choose their preferred weapons for these rounds through **`!guns`** m
 
 The plugin will give equipments **(grenades, armor & kit)** in these rounds based of the configured money, mode & max amount of grenades.
 
-Take a look at the configuration below for a better understanding.
-
 ## Credits
 - [LemonPAKA](https://github.com/LemonPAKA/) - Added Simplified Chinese Translation and taser, nova and xm1014 with the lastest version price;
