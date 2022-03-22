@@ -119,7 +119,7 @@
 
 	"Round Type"
 	{
-		"pt"		"Round Type:"
+		"pt"		"Tipo de Round:"
 	}
 
 	"You need to be in a team"
