@@ -162,65 +162,65 @@ public void OnPluginStart()
 	AutoExecConfig_SetFile("MyWeaponAllocator", "sourcemod/retakes");
 	AutoExecConfig_SetCreateFile(true);
 
-	gc_bPlugin = AutoExecConfig_CreateConVar("mywa_enable", "1", "0 - disabled, 1 - enable plugin", _, true, 0.0, true, 1.0);
+	gc_bPlugin = AutoExecConfig_CreateConVar("mywa_enable", "1", "0 - Disabled, 1 - Enable Plugin", _, true, 0.0, true, 1.0);
 
-	gc_iMode = AutoExecConfig_CreateConVar("mywa_rounds_chance", "1", "0 - chance / 1 - rounds / 2 - rifle only / 3 - force only / 4 - pistol only", _, true, 0.0, true, 4.0);
+	gc_iMode = AutoExecConfig_CreateConVar("mywa_rounds_chance", "1", "0 - Chance / 1 - Rounds / 2 - Rifle Only / 3 - Force Only / 4 - Pistol Only", _, true, 0.0, true, 4.0);
 
-	gc_iPistolChance = AutoExecConfig_CreateConVar("mywa_chance_pistol", "20", "percent chance a round will be a pistol round (mywa_rounds_chance 0)", _, true, 0.0);
-	gc_iForceChance = AutoExecConfig_CreateConVar("mywa_chance_force", "30", "percent chance a round will be a force round (mywa_rounds_chance 0)", _, true, 0.0);
-	gc_iDeagleChance = AutoExecConfig_CreateConVar("mywa_chance_deagle", "5", "percent chance a round will be a deagle round (mywa_rounds_chance 0)", _, true, 0.0);
+	gc_iPistolChance = AutoExecConfig_CreateConVar("mywa_chance_pistol", "20", "Percent chance a round will be a pistol round (mywa_rounds_chance 0)", _, true, 0.0);
+	gc_iForceChance = AutoExecConfig_CreateConVar("mywa_chance_force", "30", "Percent chance a round will be a force round (mywa_rounds_chance 0)", _, true, 0.0);
+	gc_iDeagleChance = AutoExecConfig_CreateConVar("mywa_chance_deagle", "5", "Percent chance a round will be a deagle round (mywa_rounds_chance 0)", _, true, 0.0);
 
-	gc_iPistolRounds = AutoExecConfig_CreateConVar("mywa_rounds_pistol", "3", "how many round will be pistol round (mywa_rounds_chance 1)", _, true, 0.0);
-	gc_iForceRounds = AutoExecConfig_CreateConVar("mywa_rounds_force", "4", "how many round will be force round (mywa_rounds_chance 1)", _, true, 0.0);
+	gc_iPistolRounds = AutoExecConfig_CreateConVar("mywa_rounds_pistol", "3", "How many round will be pistol round (mywa_rounds_chance 1)", _, true, 0.0);
+	gc_iForceRounds = AutoExecConfig_CreateConVar("mywa_rounds_force", "4", "How many round will be force round (mywa_rounds_chance 1)", _, true, 0.0);
 
-	gc_iFullMoney = AutoExecConfig_CreateConVar("mywa_money_full", "16000", "money for weapons and equipment on fullbuy round", _, true, 0.0);
-	gc_iPistolMoney = AutoExecConfig_CreateConVar("mywa_money_pistol", "800", "money for weapons and equipment on pistol round", _, true, 0.0);
-	gc_iForceMoney = AutoExecConfig_CreateConVar("mywa_money_force", "2700", "money for weapons and equipment on forcebuy round", _, true, 0.0);
+	gc_iFullMoney = AutoExecConfig_CreateConVar("mywa_money_full", "16000", "Money for weapons and equipment on fullbuy round", _, true, 0.0);
+	gc_iPistolMoney = AutoExecConfig_CreateConVar("mywa_money_pistol", "800", "Money for weapons and equipment on pistol round", _, true, 0.0);
+	gc_iForceMoney = AutoExecConfig_CreateConVar("mywa_money_force", "2700", "Money for weapons and equipment on forcebuy round", _, true, 0.0);
 
-	gc_iPriority_AWPsT = AutoExecConfig_CreateConVar("mywa_priority_awps_t", "1", "number of priority AWPs available for T", _, true, 1.0);
-	gc_iAWP_MinT = AutoExecConfig_CreateConVar("mywa_awp_min_t", "3", "min number of player in terrorist team before AWP is available for T", _, true, 1.0);
-	gc_iScout_MinT = AutoExecConfig_CreateConVar("mywa_scout_min_t", "2", "min number of player in terrorist team before scout is available for T", _, true, 1.0);
-	gc_iTaser_MinT = AutoExecConfig_CreateConVar("mywa_taser_min_t", "2", "min number of player in terrorist team before taser is available for T", _, true, 1.0);
-	gc_iXm1014_MinT = AutoExecConfig_CreateConVar("mywa_xm1014_min_t", "2", "min number of player in terrorist team before Xm1014 is available for T", _, true, 1.0);
-	gc_iAWP_T = AutoExecConfig_CreateConVar("mywa_awp_t", "1", "max number of AWPs for terrorist team / 0 - no AWPs", _, true, 0.0);
-	gc_iScout_T = AutoExecConfig_CreateConVar("mywa_scout_t", "1", "max number of scouts for terrorist team in force rounds/ 0 - no scouts", _, true, 0.0);
-	gc_iTaser_T = AutoExecConfig_CreateConVar("mywa_taser_t", "1", "max number of tasers for terrorist team/ 0 - no tasers", _, true, 0.0);
-	gc_iXm1014_T = AutoExecConfig_CreateConVar("mywa_xm1014_t", "1", "max number of xm1014s for terrorist team/ 0 - no xm1014s", _, true, 0.0);
-	gc_iMolotov_T = AutoExecConfig_CreateConVar("mywa_molotov_t", "2", "max number of molotovs for terrorist team / 0 - no molotovs", _, true, 0.0);
-	gc_iSmoke_T = AutoExecConfig_CreateConVar("mywa_smoke_t", "2", "max number of smokegrenades for terrorist team / 0 - no smokegrenades", _, true, 0.0);
-	gc_iFlash_T = AutoExecConfig_CreateConVar("mywa_flash_t", "3", "max number of flashbangs for terrorist team / 0 - no flashbangs", _, true, 0.0);
-	gc_iHEgrenade_T = AutoExecConfig_CreateConVar("mywa_he_t", "3", "max number of HEgrenades for terrorist team / 0 - no HEgrenades", _, true, 0.0);
+	gc_iPriority_AWPsT = AutoExecConfig_CreateConVar("mywa_priority_awps_t", "1", "Number of priority AWPS available for TR", _, true, 1.0);
+	gc_iAWP_MinT = AutoExecConfig_CreateConVar("mywa_awp_min_t", "3", "Min number of player in terrorist team before AWP is available for TR", _, true, 1.0);
+	gc_iScout_MinT = AutoExecConfig_CreateConVar("mywa_scout_min_t", "2", "Min number of player in terrorist team before scout is available for TR", _, true, 1.0);
+	gc_iTaser_MinT = AutoExecConfig_CreateConVar("mywa_taser_min_t", "2", "Min number of player in terrorist team before Zeus x27 is available for TR", _, true, 1.0);
+	gc_iXm1014_MinT = AutoExecConfig_CreateConVar("mywa_xm1014_min_t", "2", "Min number of player in terrorist team before XM1014 is available for TR", _, true, 1.0);
+	gc_iAWP_T = AutoExecConfig_CreateConVar("mywa_awp_t", "1", "Max number of AWPs for terrorist team / 0 - No AWPs", _, true, 0.0);
+	gc_iScout_T = AutoExecConfig_CreateConVar("mywa_scout_t", "1", "Max number of scouts for terrorist team in force rounds/ 0 - No scouts", _, true, 0.0);
+	gc_iTaser_T = AutoExecConfig_CreateConVar("mywa_taser_t", "1", "Max number of Zeus x27 for terrorist team/ 0 - No Zeus x27", _, true, 0.0);
+	gc_iXm1014_T = AutoExecConfig_CreateConVar("mywa_xm1014_t", "1", "Max number of xm1014s for terrorist team/ 0 - No xm1014s", _, true, 0.0);
+	gc_iMolotov_T = AutoExecConfig_CreateConVar("mywa_molotov_t", "2", "Max number of Molotovs for terrorist team / 0 - No Molotovs", _, true, 0.0);
+	gc_iSmoke_T = AutoExecConfig_CreateConVar("mywa_smoke_t", "2", "Max number of Smokegrenades for terrorist team / 0 - No Smokegrenades", _, true, 0.0);
+	gc_iFlash_T = AutoExecConfig_CreateConVar("mywa_flash_t", "3", "Max number of Flashbangs for terrorist team / 0 - No Flashbangs", _, true, 0.0);
+	gc_iHEgrenade_T = AutoExecConfig_CreateConVar("mywa_he_t", "3", "Max number of HE Grenades for terrorist team / 0 - No HE Grenades", _, true, 0.0);
 
-	gc_iPriority_AWPsCT = AutoExecConfig_CreateConVar("mywa_priority_awps_ct", "1", "number of priority AWPs available for CT", _, true, 1.0);
-	gc_iAWP_MinCT = AutoExecConfig_CreateConVar("mywa_awp_min_ct", "3", "min number of player in counter-terrorist team before AWP is available for CT", _, true, 1.0);
-	gc_iScout_MinCT = AutoExecConfig_CreateConVar("mywa_scout_min_ct", "2", "min number of player in counter-terrorist team before scout is available for CT", _, true, 1.0);
-	gc_iTaser_MinCT = AutoExecConfig_CreateConVar("mywa_taser_min_ct", "2", "min number of player in counter-terrorist team before taser is available for CT", _, true, 1.0);
-	gc_iXm1014_MinCT = AutoExecConfig_CreateConVar("mywa_xm1014_min_ct", "2", "min number of player in counter-terrorist team before Xm1014 is available for T", _, true, 1.0);
-	gc_iAWP_CT = AutoExecConfig_CreateConVar("mywa_awp_ct", "1", "max number of AWPs for counter-terrorist team / 0 - no AWPs", _, true, 0.0);
-	gc_iScout_CT = AutoExecConfig_CreateConVar("mywa_scout_ct", "1", "max number of scouts for counter-terrorist team in force rounds/ 0 - no scouts", _, true, 0.0);
-	gc_iTaser_CT = AutoExecConfig_CreateConVar("mywa_taser_ct", "1", "max number of tasers for counter-terrorist team/ 0 - no scouts", _, true, 0.0);
-	gc_iXm1014_CT = AutoExecConfig_CreateConVar("mywa_xm1014_ct", "1", "max number of xm1014s for counter-terrorist team/ 0 - no xm1014s", _, true, 0.0);
-	gc_iMolotov_CT = AutoExecConfig_CreateConVar("mywa_molotov_ct", "2", "max number of molotovs for counter-terrorist team / 0 - no molotovs", _, true, 0.0);
-	gc_iSmoke_CT = AutoExecConfig_CreateConVar("mywa_smoke_ct", "2", "max number of smokegrenades for counter-terrorist team / 0 - no smokegrenades", _, true, 0.0);
-	gc_iFlash_CT = AutoExecConfig_CreateConVar("mywa_flash_ct", "3", "max number of flashbangs for counter-terrorist team / 0 - no flashbangs", _, true, 0.0);
-	gc_iHEgrenade_CT = AutoExecConfig_CreateConVar("mywa_he_ct", "3", "max number of HEgrenades for counter-terrorist team / 0 - no HEgrenades", _, true, 0.0);
+	gc_iPriority_AWPsCT = AutoExecConfig_CreateConVar("mywa_priority_awps_ct", "1", "Number of priority AWPs available for CT", _, true, 1.0);
+	gc_iAWP_MinCT = AutoExecConfig_CreateConVar("mywa_awp_min_ct", "3", "Min number of player in counter-terrorist team before AWP is available for CT", _, true, 1.0);
+	gc_iScout_MinCT = AutoExecConfig_CreateConVar("mywa_scout_min_ct", "2", "Min number of player in counter-terrorist team before scout is available for CT", _, true, 1.0);
+	gc_iTaser_MinCT = AutoExecConfig_CreateConVar("mywa_taser_min_ct", "2", "Min number of player in counter-terrorist team before Zeus x27 is available for CT", _, true, 1.0);
+	gc_iXm1014_MinCT = AutoExecConfig_CreateConVar("mywa_xm1014_min_ct", "2", "Min number of player in counter-terrorist team before XM1014 is available for CT", _, true, 1.0);
+	gc_iAWP_CT = AutoExecConfig_CreateConVar("mywa_awp_ct", "1", "Max number of AWPs for counter-terrorist team / 0 - No AWPs", _, true, 0.0);
+	gc_iScout_CT = AutoExecConfig_CreateConVar("mywa_scout_ct", "1", "Max number of scouts for counter-terrorist team in force rounds/ 0 - No scouts", _, true, 0.0);
+	gc_iTaser_CT = AutoExecConfig_CreateConVar("mywa_taser_ct", "1", "Max number of Zeus x27 for counter-terrorist team/ 0 - No scouts", _, true, 0.0);
+	gc_iXm1014_CT = AutoExecConfig_CreateConVar("mywa_xm1014_ct", "1", "Max number of xm1014s for counter-terrorist team/ 0 - No xm1014s", _, true, 0.0);
+	gc_iMolotov_CT = AutoExecConfig_CreateConVar("mywa_molotov_ct", "2", "Max number of Molotovs for counter-terrorist team / 0 - No Molotovs", _, true, 0.0);
+	gc_iSmoke_CT = AutoExecConfig_CreateConVar("mywa_smoke_ct", "2", "Max number of Smokegrenades for counter-terrorist team / 0 - No Smokegrenades", _, true, 0.0);
+	gc_iFlash_CT = AutoExecConfig_CreateConVar("mywa_flash_ct", "3", "Max number of Flashbangs for counter-terrorist team / 0 - No Flashbangs", _, true, 0.0);
+	gc_iHEgrenade_CT = AutoExecConfig_CreateConVar("mywa_he_ct", "3", "Max number of HE Grenades for counter-terrorist team / 0 - No HE Grenades", _, true, 0.0);
 
-	gc_iOrder = AutoExecConfig_CreateConVar("mywa_buy_order", "0", "order to buy the equipments / 0 - random, 1 - 1st grenades 2nd armor & kit, 2 - 1st armor & kit 2nd grenades ", _, true, 0.0, true, 2.0);
+	gc_iOrder = AutoExecConfig_CreateConVar("mywa_buy_order", "0", "Order to buy the equipments / 0 - Random, 1 - 1st Grenades 2nd Armor & Kit, 2 - 1st Armor & Kit 2nd Grenades", _, true, 0.0, true, 2.0);
 
-	gc_bKevlar = AutoExecConfig_CreateConVar("mywa_kevlar", "1", "0 - disabled, 1 - enable kevlar", _, true, 0.0, true, 1.0);
-	gc_bHelm = AutoExecConfig_CreateConVar("mywa_helm", "1", "0 - disabled, 1 - enable helm", _, true, 0.0, true, 1.0);
-	gc_bDefuser = AutoExecConfig_CreateConVar("mywa_defuser", "1", "0 - disabled, 1 - enable defuser", _, true, 0.0, true, 1.0);
-	gc_bTaser = AutoExecConfig_CreateConVar("mywa_taser", "0", "0 - disabled, 1 - enable taser", _, true, 0.0, true, 1.0);
+	gc_bKevlar = AutoExecConfig_CreateConVar("mywa_kevlar", "1", "0 - Disabled, 1 - Enable kevlar", _, true, 0.0, true, 1.0);
+	gc_bHelm = AutoExecConfig_CreateConVar("mywa_helm", "1", "0 - Disabled, 1 - Enable helm", _, true, 0.0, true, 1.0);
+	gc_bDefuser = AutoExecConfig_CreateConVar("mywa_defuser", "1", "0 - Disabled, 1 - Enable defuser", _, true, 0.0, true, 1.0);
+	gc_bTaser = AutoExecConfig_CreateConVar("mywa_taser", "0", "0 - Disabled, 1 - Enable Zeus x27", _, true, 0.0, true, 1.0);
 
-	gc_bDeagle = AutoExecConfig_CreateConVar("mywa_deagle", "1", "0 - disabled, 1 - enable deagle for pistol & fullbuy rounds", _, true, 0.0, true, 1.0);
-	gc_bDeagleForce = AutoExecConfig_CreateConVar("mywa_deagleforce", "1", "0 - disabled, 1 - enable deagle for forcebuy rounds", _, true, 0.0, true, 1.0);
-	gc_bRevolver = AutoExecConfig_CreateConVar("mywa_revolver", "1", "0 - disabled, 1 - enable revolver for pistol & fullbuy rounds", _, true, 0.0, true, 1.0);
-	gc_bP90 = AutoExecConfig_CreateConVar("mywa_p90", "1", "0 - disabled, 1 - enable p90 for fullbuy rounds", _, true, 0.0, true, 1.0);
-	gc_bNova = AutoExecConfig_CreateConVar("mywa_nova", "1", "0 - disabled, 1 - enable nova for forcebuy & fullbuy rounds", _, true, 0.0, true, 1.0);
-	gc_bXm1014 = AutoExecConfig_CreateConVar("mywa_xm1014", "1", "0 - disabled, 1 - enable xm1014 for forcebuy & fullbuy rounds", _, true, 0.0, true, 1.0);
+	gc_bDeagle = AutoExecConfig_CreateConVar("mywa_deagle", "1", "0 - Disabled, 1 - Enable deagle for pistol & fullbuy rounds", _, true, 0.0, true, 1.0);
+	gc_bDeagleForce = AutoExecConfig_CreateConVar("mywa_deagleforce", "1", "0 - Disabled, 1 - Enable deagle for forcebuy rounds", _, true, 0.0, true, 1.0);
+	gc_bRevolver = AutoExecConfig_CreateConVar("mywa_revolver", "1", "0 - Disabled, 1 - Enable revolver for pistol & fullbuy rounds", _, true, 0.0, true, 1.0);
+	gc_bP90 = AutoExecConfig_CreateConVar("mywa_p90", "1", "0 - Disabled, 1 - Enable p90 for fullbuy rounds", _, true, 0.0, true, 1.0);
+	gc_bNova = AutoExecConfig_CreateConVar("mywa_nova", "1", "0 - Disabled, 1 - Enable nova for forcebuy & fullbuy rounds", _, true, 0.0, true, 1.0);
+	gc_bXm1014 = AutoExecConfig_CreateConVar("mywa_xm1014", "1", "0 - Disabled, 1 - Enable XM1014 for forcebuy & fullbuy rounds", _, true, 0.0, true, 1.0);
 
-	gc_bBombsite = AutoExecConfig_CreateConVar("mywa_bombsite", "1", "0 - disabled, 1 - enable bombsite notifications", _, true, 0.0, true, 1.0);
-	gc_bAwpPriority = AutoExecConfig_CreateConVar("mywa_priority_awps", "1", "0 - disabled, 1 - enable priority awps for admins and VIPs", _, true, 0.0, true, 1.0);
+	gc_bBombsite = AutoExecConfig_CreateConVar("mywa_bombsite", "1", "0 - Disabled, 1 - Enable Bombsite Notifications", _, true, 0.0, true, 1.0);
+	gc_bAwpPriority = AutoExecConfig_CreateConVar("mywa_priority_awps", "1", "0 - Disabled, 1 - Enable priority AWPS for ADMINS and VIPS", _, true, 0.0, true, 1.0);
 
 	AutoExecConfig_ExecuteFile();
 	AutoExecConfig_CleanFile();
@@ -401,6 +401,7 @@ public Action OnClientSayCommand(int client, const char[] command, const char[] 
 			break;
 		}
 	}
+	
 	return Plugin_Continue;
 }
 

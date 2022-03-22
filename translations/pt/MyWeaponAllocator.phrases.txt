@@ -59,7 +59,7 @@
 
 	"Select a T rifle"
 	{
-		"pt"		"Selecione Rifle de T:"
+		"pt"		"Selecione Rifle de TR:"
 	}
 
 	"Select a CT pistol"
@@ -69,7 +69,7 @@
 
 	"Select a T pistol"
 	{
-		"pt"		"Selecione Pistol de T:"
+		"pt"		"Selecione Pistol de TR:"
 	}
 
 	"Select a CT SMG"
@@ -79,7 +79,7 @@
 
 	"Select a T SMG"
 	{
-		"pt"		"Selecione SMG de T:"
+		"pt"		"Selecione SMG de TR:"
 	}
 
 	"Allow Sniper"

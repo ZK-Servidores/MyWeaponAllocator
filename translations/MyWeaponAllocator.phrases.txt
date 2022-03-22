@@ -54,22 +54,22 @@
 
 	"Select a CT rifle"
 	{
-		"en"		"Select a CT rifle:"
+		"en"		"Select a CT Rifle:"
 	}
 
 	"Select a T rifle"
 	{
-		"en"		"Select a T rifle:"
+		"en"		"Select a TR Rifle:"
 	}
 
 	"Select a CT pistol"
 	{
-		"en"		"Select a CT pistol:"
+		"en"		"Select a CT Pistol:"
 	}
 
 	"Select a T pistol"
 	{
-		"en"		"Select a T pistol:"
+		"en"		"Select a TR Pistol:"
 	}
 
 	"Select a CT SMG"
@@ -79,7 +79,7 @@
 
 	"Select a T SMG"
 	{
-		"en"		"Select a T SMG:"
+		"en"		"Select a TR SMG:"
 	}
 
 	"Allow Sniper"
@@ -89,12 +89,12 @@
 	
 	"Allow Taser"
 	{
-		"en"		"Allow yourself to receive taser?"
+		"en"		"Allow yourself to receive Zeus x27?"
 	}
 
 	"Allow Xm1014"
 	{
-		"en"		"Allow yourself to receive xm1014?"
+		"en"		"Allow yourself to receive XM1014?"
 	}
 
 	"Yes"
