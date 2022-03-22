@@ -179,27 +179,27 @@ public void OnPluginStart()
 
 	gc_iPriority_AWPsT = AutoExecConfig_CreateConVar("mywa_priority_awps_t", "1", "Number of priority AWPS available for TR", _, true, 1.0);
 	gc_iAWP_MinT = AutoExecConfig_CreateConVar("mywa_awp_min_t", "3", "Min number of player in terrorist team before AWP is available for TR", _, true, 1.0);
-	gc_iScout_MinT = AutoExecConfig_CreateConVar("mywa_scout_min_t", "2", "Min number of player in terrorist team before scout is available for TR", _, true, 1.0);
+	gc_iScout_MinT = AutoExecConfig_CreateConVar("mywa_scout_min_t", "2", "Min number of player in terrorist team before SSG 08 is available for TR", _, true, 1.0);
 	gc_iTaser_MinT = AutoExecConfig_CreateConVar("mywa_taser_min_t", "2", "Min number of player in terrorist team before Zeus x27 is available for TR", _, true, 1.0);
 	gc_iXm1014_MinT = AutoExecConfig_CreateConVar("mywa_xm1014_min_t", "2", "Min number of player in terrorist team before XM1014 is available for TR", _, true, 1.0);
-	gc_iAWP_T = AutoExecConfig_CreateConVar("mywa_awp_t", "1", "Max number of AWPs for terrorist team / 0 - No AWPs", _, true, 0.0);
+	gc_iAWP_T = AutoExecConfig_CreateConVar("mywa_awp_t", "1", "Max number of AWPS for terrorist team / 0 - No AWPS", _, true, 0.0);
 	gc_iScout_T = AutoExecConfig_CreateConVar("mywa_scout_t", "1", "Max number of scouts for terrorist team in force rounds/ 0 - No scouts", _, true, 0.0);
 	gc_iTaser_T = AutoExecConfig_CreateConVar("mywa_taser_t", "1", "Max number of Zeus x27 for terrorist team/ 0 - No Zeus x27", _, true, 0.0);
-	gc_iXm1014_T = AutoExecConfig_CreateConVar("mywa_xm1014_t", "1", "Max number of xm1014s for terrorist team/ 0 - No xm1014s", _, true, 0.0);
+	gc_iXm1014_T = AutoExecConfig_CreateConVar("mywa_xm1014_t", "1", "Max number of XM1014 for terrorist team/ 0 - No XM1014", _, true, 0.0);
 	gc_iMolotov_T = AutoExecConfig_CreateConVar("mywa_molotov_t", "2", "Max number of Molotovs for terrorist team / 0 - No Molotovs", _, true, 0.0);
 	gc_iSmoke_T = AutoExecConfig_CreateConVar("mywa_smoke_t", "2", "Max number of Smokegrenades for terrorist team / 0 - No Smokegrenades", _, true, 0.0);
 	gc_iFlash_T = AutoExecConfig_CreateConVar("mywa_flash_t", "3", "Max number of Flashbangs for terrorist team / 0 - No Flashbangs", _, true, 0.0);
 	gc_iHEgrenade_T = AutoExecConfig_CreateConVar("mywa_he_t", "3", "Max number of HE Grenades for terrorist team / 0 - No HE Grenades", _, true, 0.0);
 
-	gc_iPriority_AWPsCT = AutoExecConfig_CreateConVar("mywa_priority_awps_ct", "1", "Number of priority AWPs available for CT", _, true, 1.0);
+	gc_iPriority_AWPsCT = AutoExecConfig_CreateConVar("mywa_priority_awps_ct", "1", "Number of priority AWPS available for CT", _, true, 1.0);
 	gc_iAWP_MinCT = AutoExecConfig_CreateConVar("mywa_awp_min_ct", "3", "Min number of player in counter-terrorist team before AWP is available for CT", _, true, 1.0);
-	gc_iScout_MinCT = AutoExecConfig_CreateConVar("mywa_scout_min_ct", "2", "Min number of player in counter-terrorist team before scout is available for CT", _, true, 1.0);
+	gc_iScout_MinCT = AutoExecConfig_CreateConVar("mywa_scout_min_ct", "2", "Min number of player in counter-terrorist team before SSG 08 is available for CT", _, true, 1.0);
 	gc_iTaser_MinCT = AutoExecConfig_CreateConVar("mywa_taser_min_ct", "2", "Min number of player in counter-terrorist team before Zeus x27 is available for CT", _, true, 1.0);
 	gc_iXm1014_MinCT = AutoExecConfig_CreateConVar("mywa_xm1014_min_ct", "2", "Min number of player in counter-terrorist team before XM1014 is available for CT", _, true, 1.0);
-	gc_iAWP_CT = AutoExecConfig_CreateConVar("mywa_awp_ct", "1", "Max number of AWPs for counter-terrorist team / 0 - No AWPs", _, true, 0.0);
+	gc_iAWP_CT = AutoExecConfig_CreateConVar("mywa_awp_ct", "1", "Max number of AWPS for counter-terrorist team / 0 - No AWPS", _, true, 0.0);
 	gc_iScout_CT = AutoExecConfig_CreateConVar("mywa_scout_ct", "1", "Max number of scouts for counter-terrorist team in force rounds/ 0 - No scouts", _, true, 0.0);
 	gc_iTaser_CT = AutoExecConfig_CreateConVar("mywa_taser_ct", "1", "Max number of Zeus x27 for counter-terrorist team/ 0 - No scouts", _, true, 0.0);
-	gc_iXm1014_CT = AutoExecConfig_CreateConVar("mywa_xm1014_ct", "1", "Max number of xm1014s for counter-terrorist team/ 0 - No xm1014s", _, true, 0.0);
+	gc_iXm1014_CT = AutoExecConfig_CreateConVar("mywa_xm1014_ct", "1", "Max number of XM1014 for counter-terrorist team/ 0 - No XM1014", _, true, 0.0);
 	gc_iMolotov_CT = AutoExecConfig_CreateConVar("mywa_molotov_ct", "2", "Max number of Molotovs for counter-terrorist team / 0 - No Molotovs", _, true, 0.0);
 	gc_iSmoke_CT = AutoExecConfig_CreateConVar("mywa_smoke_ct", "2", "Max number of Smokegrenades for counter-terrorist team / 0 - No Smokegrenades", _, true, 0.0);
 	gc_iFlash_CT = AutoExecConfig_CreateConVar("mywa_flash_ct", "3", "Max number of Flashbangs for counter-terrorist team / 0 - No Flashbangs", _, true, 0.0);
@@ -231,9 +231,11 @@ public void OnPluginStart()
 	g_hPrimary_CT = RegClientCookie("MyWA - Primary CT", "", CookieAccess_Private);
 	g_hSecondary_CT = RegClientCookie("MyWA - Secondary CT", "", CookieAccess_Private);
 	g_hSMG_CT = RegClientCookie("MyWA MG - CT", "", CookieAccess_Private);
+	
 	g_hPrimary_T = RegClientCookie("MyWA - Primary T", "", CookieAccess_Private);
 	g_hSecondary_T = RegClientCookie("MyWA - Secondary T", "", CookieAccess_Private);
 	g_hSMG_T = RegClientCookie("MyWA - SMG T", "", CookieAccess_Private);
+	
 	g_hSniper = RegClientCookie("MyWA - Sniper", "", CookieAccess_Private);
 	g_hTaser = RegClientCookie("MyWA - Taser", "", CookieAccess_Private);
 	g_hXm1014 = RegClientCookie("MyWA - Xm1014", "", CookieAccess_Private);
@@ -281,8 +283,9 @@ public void OnClientConnected(int client)
 	Format(g_sPrimary_CT[client], sizeof(g_sPrimary_CT), "weapon_m4a1");
 	Format(g_sSecondary_CT[client], sizeof(g_sSecondary_CT), "weapon_usp_silencer");
 	Format(g_sSMG_CT[client], sizeof(g_sSMG_CT), "weapon_ump45");
+	
 	Format(g_sPrimary_T[client], sizeof(g_sPrimary_T), "weapon_ak47");
-	Format(g_sSecondary_T[client], sizeof(g_sSecondary_T), "weapon_glock");
+	Format(g_sSecondary_T[client], sizeof(g_sSecondary_T), "weapon_glock");	
 	Format(g_sSMG_T[client], sizeof(g_sSMG_T), "weapon_ump45");
 
 	g_bSniper[client] = false;
@@ -371,9 +374,11 @@ public void OnClientDisconnect(int client)
 	SetClientCookie(client, g_hPrimary_CT, g_sPrimary_CT[client]);
 	SetClientCookie(client, g_hSecondary_CT, g_sSecondary_CT[client]);
 	SetClientCookie(client, g_hSMG_CT, g_sSMG_CT[client]);
+	
 	SetClientCookie(client, g_hPrimary_T, g_sPrimary_T[client]);
 	SetClientCookie(client, g_hSecondary_T, g_sSecondary_T[client]);
 	SetClientCookie(client, g_hSMG_T, g_sSMG_T[client]);
+	
 	SetClientCookie(client, g_hSniper, g_bSniper[client] ? "1" : "0");
 	SetClientCookie(client, g_hTaser, g_bTaser[client] ? "1" : "0");
 	SetClientCookie(client, g_hXm1014, g_bXm1014[client] ? "1" : "0");
@@ -1082,8 +1087,7 @@ void EquipWeapons(int client)
 			}
 			if (iRandom == 1 && g_bSniper[client] && (gc_iAWP_MinCT.IntValue <= GetPlayerCount(true, CS_TEAM_CT) || CanPriorityAWP(client)))
 			{
-				if (CanPriorityAWP(client) && g_iPriority_AWP_CT < gc_iPriority_AWPsCT.IntValue)
-										
+				if (CanPriorityAWP(client) && g_iPriority_AWP_CT < gc_iPriority_AWPsCT.IntValue)										
 				{
 					GivePlayerItem(client, "weapon_awp");
 					iMoney -= GetWeaponPrice("weapon_awp");
@@ -1158,8 +1162,7 @@ void EquipWeapons(int client)
 				}
 			}
 			else if (iRandom == 2 && g_bXm1014[client] && gc_iXm1014_MinT.IntValue <= GetPlayerCount(true, CS_TEAM_T))
-			{
-				
+			{				
 				if (g_iXm1014_T < gc_iXm1014_T.IntValue)
 				{
 					GivePlayerItem(client, "weapon_xm1014");
