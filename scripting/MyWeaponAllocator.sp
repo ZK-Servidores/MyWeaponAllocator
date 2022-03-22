@@ -140,7 +140,7 @@ public Plugin myinfo =
 	author = "shanapu",
 	description = "Retakes weapon allocator",
 	version = "2.6.1",
-	url = "https://github.com/shanapu/MyWeaponAllocator"
+	url = "https://github.com/ZK-Servidores/Plugins-SourceMod"
 };
 
 public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err)
@@ -252,7 +252,6 @@ public void OnPluginStart()
 
 			OnClientCookiesCached(i);
 		}
-
 		g_bIsLateLoad = false;
 	}
 
@@ -359,7 +358,7 @@ public void OnPluginEnd()
 	{
 		if (!IsClientInGame(i))
 			continue;
-
+			
 		OnClientDisconnect(i);
 	}
 }
@@ -402,7 +401,6 @@ public Action OnClientSayCommand(int client, const char[] command, const char[] 
 			break;
 		}
 	}
-
 	return Plugin_Continue;
 }
 
@@ -599,7 +597,6 @@ void SetRoundType(int type)
 
 	EquipAllPlayerWeapon();
 }
-
 
 void EquipAllPlayerWeapon()
 {
