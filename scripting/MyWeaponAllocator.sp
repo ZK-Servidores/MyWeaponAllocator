@@ -154,10 +154,10 @@ public void OnPluginStart()
 {
 	LoadTranslations("MyWeaponAllocator.phrases");
 
-	RegConsoleCmd("sm_weapon", Command_Weapons, "open the weapon menu");
-	RegConsoleCmd("sm_awp", Command_AWP, "open the AWP menu");
-	RegConsoleCmd("sm_taser", Command_Taser, "open the taser menu");
-	RegConsoleCmd("sm_auto", Command_AutoShotGun, "open the xm1014 menu");
+	RegConsoleCmd("sm_weapon", Command_Weapons, "Open the Weapon Menu");
+	RegConsoleCmd("sm_awp", Command_AWP, "Open the AWP Menu");
+	RegConsoleCmd("sm_taser", Command_Taser, "Open the Zeus x27 Menu");
+	RegConsoleCmd("sm_auto", Command_AutoShotGun, "Open the XM1014 Menu");
 
 	AutoExecConfig_SetFile("MyWeaponAllocator", "sourcemod/retakes");
 	AutoExecConfig_SetCreateFile(true);
@@ -594,7 +594,6 @@ void SetRoundType(int type)
 		g_iRoundType = RIFLE_ROUND;
 		Format(g_sRoundType, sizeof(g_sRoundType), "%t", "Rifle Round");
 	}
-
 	EquipAllPlayerWeapon();
 }
 
