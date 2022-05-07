@@ -1,7 +1,7 @@
 // Exported from SourceMod Translator
 // Date: 2018-10-22 12:38:49 UTC
 // Language: Russian (ru)
-// 
+//
 // To view other translations for this plugin, please visit:
 // http://translator.mitchdempsey.com/sourcemod_plugins/311
 //

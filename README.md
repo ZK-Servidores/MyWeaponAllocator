@@ -17,3 +17,6 @@ The plugin will give equipments **(grenades, armor & kit)** in these rounds base
 
 ## Credits
 - [LemonPAKA](https://github.com/LemonPAKA/) - Added Simplified Chinese Translation and Zeus x27, Nova and XM1014 with the lastest version price;
+- [b3none](https://github.com/b3none) - Added AWP priority system for VIP players;
+- [splewis](https://github.com/splewis) - Fix minors in message when plant c4;
+- [crashzk](https://github.com/crashzk) - Fix minors and update translations;

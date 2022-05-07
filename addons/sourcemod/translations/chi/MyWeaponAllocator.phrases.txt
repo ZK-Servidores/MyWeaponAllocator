@@ -1,7 +1,7 @@
 // Exported from SourceMod Translator
 // Date: 2018-07-26 13:18:58 UTC
 // Language: English (en)
-// 
+//
 // To view other translations for this plugin, please visit:
 // http://translator.mitchdempsey.com/sourcemod_plugins/311
 //
@@ -82,17 +82,17 @@
 	{
 		"chi"		"是否在强起局使用Ssg08?\n是否在全起局使用AWP?"
 	}
-	
+
 	"Allow Taser"
 	{
 		"chi"		"是否使用电击枪?"
 	}
-	
+
 	"Allow Xm1014"
 	{
 		"chi"		"是否使用连喷?"
 	}
-	
+
 	"Yes"
 	{
 		"chi"		"是"

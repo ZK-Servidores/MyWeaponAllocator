@@ -1,7 +1,7 @@
 /*
  * MyWeaponAllocator
  * by: shanapu
- * 
+ *
  * Copyright (C) 2016-2019 Thomas Schmidt (shanapu)
  * Contributors: LemonPAKA, B3none, splewis
  *
@@ -10,7 +10,7 @@
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License, version 3.0, as published by the
  * Free Software Foundation.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
@@ -232,11 +232,11 @@ public void OnPluginStart()
 	g_hPrimary_CT = RegClientCookie("MyWA - Primary CT", "", CookieAccess_Private);
 	g_hSecondary_CT = RegClientCookie("MyWA - Secondary CT", "", CookieAccess_Private);
 	g_hSMG_CT = RegClientCookie("MyWA MG - CT", "", CookieAccess_Private);
-	
+
 	g_hPrimary_T = RegClientCookie("MyWA - Primary T", "", CookieAccess_Private);
 	g_hSecondary_T = RegClientCookie("MyWA - Secondary T", "", CookieAccess_Private);
 	g_hSMG_T = RegClientCookie("MyWA - SMG T", "", CookieAccess_Private);
-	
+
 	g_hSniper = RegClientCookie("MyWA - Sniper", "", CookieAccess_Private);
 	g_hTaser = RegClientCookie("MyWA - Taser", "", CookieAccess_Private);
 	g_hXm1014 = RegClientCookie("MyWA - Xm1014", "", CookieAccess_Private);
@@ -284,9 +284,9 @@ public void OnClientConnected(int client)
 	Format(g_sPrimary_CT[client], sizeof(g_sPrimary_CT), "weapon_m4a1");
 	Format(g_sSecondary_CT[client], sizeof(g_sSecondary_CT), "weapon_usp_silencer");
 	Format(g_sSMG_CT[client], sizeof(g_sSMG_CT), "weapon_ump45");
-	
+
 	Format(g_sPrimary_T[client], sizeof(g_sPrimary_T), "weapon_ak47");
-	Format(g_sSecondary_T[client], sizeof(g_sSecondary_T), "weapon_glock");	
+	Format(g_sSecondary_T[client], sizeof(g_sSecondary_T), "weapon_glock");
 	Format(g_sSMG_T[client], sizeof(g_sSMG_T), "weapon_ump45");
 
 	g_bSniper[client] = false;
@@ -342,13 +342,13 @@ public void OnClientCookiesCached(int client)
 	{
 		g_bSniper[client] = view_as<bool>(StringToInt(sBuffer));
 	}
-	
+
 	GetClientCookie(client, g_hTaser, sBuffer, sizeof(sBuffer));
 	if (sBuffer[0] != '\0')
 	{
 		g_bTaser[client] = view_as<bool>(StringToInt(sBuffer));
 	}
-	
+
 	GetClientCookie(client, g_hXm1014, sBuffer, sizeof(sBuffer));
 	if (sBuffer[0] != '\0')
 	{
@@ -362,7 +362,7 @@ public void OnPluginEnd()
 	{
 		if (!IsClientInGame(i))
 			continue;
-			
+
 		OnClientDisconnect(i);
 	}
 }
@@ -375,11 +375,11 @@ public void OnClientDisconnect(int client)
 	SetClientCookie(client, g_hPrimary_CT, g_sPrimary_CT[client]);
 	SetClientCookie(client, g_hSecondary_CT, g_sSecondary_CT[client]);
 	SetClientCookie(client, g_hSMG_CT, g_sSMG_CT[client]);
-	
+
 	SetClientCookie(client, g_hPrimary_T, g_sPrimary_T[client]);
 	SetClientCookie(client, g_hSecondary_T, g_sSecondary_T[client]);
 	SetClientCookie(client, g_hSMG_T, g_sSMG_T[client]);
-	
+
 	SetClientCookie(client, g_hSniper, g_bSniper[client] ? "1" : "0");
 	SetClientCookie(client, g_hTaser, g_bTaser[client] ? "1" : "0");
 	SetClientCookie(client, g_hXm1014, g_bXm1014[client] ? "1" : "0");
@@ -406,7 +406,7 @@ public Action OnClientSayCommand(int client, const char[] command, const char[] 
 
 			break;
 		}
-	}	
+	}
 	return Plugin_Continue;
 }
 
@@ -454,7 +454,7 @@ public Action Command_Taser(int client, int args)
 {
 	if (!gc_bPlugin.BoolValue)
 		return Plugin_Handled;
-	
+
 	if (!gc_bTaser.BoolValue)
 		return Plugin_Handled;
 
@@ -486,7 +486,7 @@ public void Event_BombPlanted(Event event, const char[] name, bool dontBroadcast
 {
 	if(!gc_bBombsite.BoolValue)
 		return;
-	
+
 	if(!Retakes_Live())
 		return;
 
@@ -709,22 +709,22 @@ void Menu_Primary(int client)
 		Format(sBuffer, sizeof(sBuffer), "%t\n", "Select a CT rifle");
 		menu.AddItem("weapon_m4a1", "M4A1");
 		menu.AddItem("weapon_m4a1_silencer", "M4A1-S");
-		menu.AddItem("weapon_ak47", "AK-47");		
+		menu.AddItem("weapon_ak47", "AK-47");
 		menu.AddItem("weapon_aug", "AUG");
 		menu.AddItem("weapon_sg556", "SG 553");
-		menu.AddItem("weapon_galilar", "Galil AR");		
-		menu.AddItem("weapon_famas", "FAMAS");		
+		menu.AddItem("weapon_galilar", "Galil AR");
+		menu.AddItem("weapon_famas", "FAMAS");
 	}
 	else if (!g_bIsCT[client])
 	{
 		Format(sBuffer, sizeof(sBuffer), "%t\n", "Select a T rifle");
 		menu.AddItem("weapon_m4a1", "M4A1");
 		menu.AddItem("weapon_m4a1_silencer", "M4A1-S");
-		menu.AddItem("weapon_ak47", "AK-47");		
+		menu.AddItem("weapon_ak47", "AK-47");
 		menu.AddItem("weapon_aug", "AUG");
 		menu.AddItem("weapon_sg556", "SG 553");
-		menu.AddItem("weapon_galilar", "Galil AR");		
-		menu.AddItem("weapon_famas", "FAMAS");	
+		menu.AddItem("weapon_galilar", "Galil AR");
+		menu.AddItem("weapon_famas", "FAMAS");
 	}
 
 	if (gc_bP90.BoolValue)
@@ -754,7 +754,7 @@ void Menu_Secondary(int client)
 		menu.AddItem("weapon_usp_silencer", "USP-S");
 		menu.AddItem("weapon_glock", "Glock-18");
 		menu.AddItem("weapon_hkp2000", "P2000");
-		menu.AddItem("weapon_fiveseven", "Five-SeveN");		
+		menu.AddItem("weapon_fiveseven", "Five-SeveN");
 		menu.AddItem("weapon_tec9", "Tec-9");
 		menu.AddItem("weapon_elite", "Dual Berettas");
 	}
@@ -764,7 +764,7 @@ void Menu_Secondary(int client)
 		menu.AddItem("weapon_usp_silencer", "USP-S");
 		menu.AddItem("weapon_glock", "Glock-18");
 		menu.AddItem("weapon_hkp2000", "P2000");
-		menu.AddItem("weapon_fiveseven", "Five-SeveN");		
+		menu.AddItem("weapon_fiveseven", "Five-SeveN");
 		menu.AddItem("weapon_tec9", "Tec-9");
 		menu.AddItem("weapon_elite", "Dual Berettas");
 	}
@@ -798,7 +798,7 @@ void Menu_SMG(int client)
 	menu.AddItem("weapon_p90", "P90");
 	menu.AddItem("weapon_mp7", "MP7");
 	menu.AddItem("weapon_mp5sd", "MP5-SD");
-	
+
 	if (gc_bDeagleForce.BoolValue)
 	{
 		menu.AddItem("weapon_deagle","Deagle");
@@ -1103,7 +1103,7 @@ void EquipWeapons(int client)
 			}
 			if (iRandom == 1 && g_bSniper[client] && (gc_iAWP_MinCT.IntValue <= GetPlayerCount(true, CS_TEAM_CT) || CanPriorityAWP(client)))
 			{
-				if (CanPriorityAWP(client) && g_iPriority_AWP_CT < gc_iPriority_AWPsCT.IntValue)										
+				if (CanPriorityAWP(client) && g_iPriority_AWP_CT < gc_iPriority_AWPsCT.IntValue)
 				{
 					GivePlayerItem(client, "weapon_awp");
 					iMoney -= GetWeaponPrice("weapon_awp");
@@ -1123,7 +1123,7 @@ void EquipWeapons(int client)
 			}
 			else if (iRandom == 2 && g_bXm1014[client] && gc_iXm1014_MinCT.IntValue <= GetPlayerCount(true, CS_TEAM_CT))
 			{
-				
+
 				if (g_iXm1014_CT < gc_iXm1014_CT.IntValue)
 				{
 					GivePlayerItem(client, "weapon_xm1014");
@@ -1177,7 +1177,7 @@ void EquipWeapons(int client)
 				}
 			}
 			else if (iRandom == 2 && g_bXm1014[client] && gc_iXm1014_MinT.IntValue <= GetPlayerCount(true, CS_TEAM_T))
-			{				
+			{
 				if (g_iXm1014_T < gc_iXm1014_T.IntValue)
 				{
 					GivePlayerItem(client, "weapon_xm1014");
@@ -1302,7 +1302,7 @@ void EquipWeapons(int client)
 			}
 			else if (iRandom == 2 && g_bXm1014[client] && gc_iXm1014_MinCT.IntValue <= GetPlayerCount(true, CS_TEAM_CT))
 			{
-				
+
 				if (g_iXm1014_CT < gc_iXm1014_CT.IntValue)
 				{
 					GivePlayerItem(client, "weapon_xm1014");
@@ -1358,7 +1358,7 @@ void EquipWeapons(int client)
 			}
 			else if (iRandom == 2 && g_bXm1014[client] && gc_iXm1014_MinT.IntValue <= GetPlayerCount(true, CS_TEAM_T))
 			{
-				
+
 				if (g_iXm1014_T < gc_iXm1014_T.IntValue)
 				{
 					GivePlayerItem(client, "weapon_xm1014");
@@ -1523,7 +1523,7 @@ void GiveNades(int client, int money, int order)
 	else if (GetClientTeam(client) == CS_TEAM_CT)
 	{
 		GivePlayerItem(client, "weapon_knife");
-		
+
 		if (iRandom == 1)
 		{
 			if (g_iMolotov_CT < gc_iMolotov_CT.IntValue && money >= 600)
@@ -1747,10 +1747,10 @@ int GetWeaponPrice(char[] weapon)
 
 	else if (StrEqual(weapon, "weapon_nova"))
 		return 1050;
-		
+
 	else if (StrEqual(weapon, "weapon_xm1014"))
 		return 2000;
-		
+
 	else if (StrEqual(weapon, "weapon_sawedoff"))
 		return 1100;
 
@@ -1774,7 +1774,7 @@ int GetWeaponPrice(char[] weapon)
 
 	else if (StrEqual(weapon, "weapon_incgrenade"))
 		return 600;
-		
+
 	else if (StrEqual(weapon, "weapon_taser"))
 		return 200;
 

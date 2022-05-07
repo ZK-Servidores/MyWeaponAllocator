@@ -1,7 +1,7 @@
 // Exported from SourceMod Translator
 // Date: 2019-07-09 01:27:38 UTC
 // Language: Portuguese-BR (pt)
-// 
+//
 // To view other translations for this plugin, please visit:
 // http://translator.mitchdempsey.com/sourcemod_plugins/311
 //
@@ -86,7 +86,7 @@
 	{
 		"pt"		"Receber: \nSSG 08 na Compra Forçada e\nAWP na Full Compra?"
 	}
-	
+
 	"Allow Taser"
 	{
 		"pt"		"Receber Zeus x27?"
@@ -96,7 +96,7 @@
 	{
 		"pt"		"Receber XM1014?"
 	}
-	
+
 	"Yes"
 	{
 		"pt"		"Sim"
