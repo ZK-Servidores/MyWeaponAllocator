@@ -3,7 +3,7 @@
  * by: shanapu
  *
  * Copyright (C) 2016-2019 Thomas Schmidt (shanapu)
- * Contributors: LemonPAKA, B3none, splewis
+ * Contributors: LemonPAKA, B3none, splewis, borzaka, crashzk
  *
  * Idea, commissioning & testing: Leeter & xooni
  *
@@ -137,7 +137,7 @@ char g_sRoundType[64];
 public Plugin myinfo =
 {
 	name = "[Retakes] My Weapon Allocator",
-	author = "shanapu, crashzk",
+	author = "shanapu, LemonPAKA, B3none, splewis, borzaka, crashzk",
 	description = "Retakes Weapon Allocator",
 	version = "2.6.4",
 	url = "https://github.com/ZK-Servidores/Plugins-SourceMod"
