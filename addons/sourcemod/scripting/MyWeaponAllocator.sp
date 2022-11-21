@@ -689,10 +689,10 @@ void Menus_Weapons(int client)
 	{
 		Menu_Primary(client);
 	}
-	/*else if (gc_iMode.IntValue == 3)
+	else if (gc_iMode.IntValue == 3)
 	{
 		Menu_SMG(client);
-	}*/
+	}
 	else if (gc_iMode.IntValue == 4)
 	{
 		Menu_Secondary(client);
@@ -788,7 +788,7 @@ void Menu_Secondary(int client)
 	menu.Display(client, MENU_TIME_FOREVER);
 }
 
-/* void Menu_SMG(int client)
+void Menu_SMG(int client)
 {
 	char sBuffer[255];
 	Menu menu = new Menu(Handler_SMG);
@@ -830,7 +830,7 @@ void Menu_Secondary(int client)
 	menu.ExitButton = true;
 
 	menu.Display(client, MENU_TIME_FOREVER);
-}*/
+}
 
 public void Menu_AWP(int client)
 {
@@ -929,10 +929,10 @@ public int Handler_Secondary(Menu menu, MenuAction action, int client, int selec
 			Format (g_sSecondary_T[client], sizeof(g_sSecondary_T), sBuffer);
 		}
 
-		/*if (gc_iMode.IntValue < 2 || gc_iMode.IntValue == 3)
+		if (gc_iMode.IntValue < 2 || gc_iMode.IntValue == 3)
 		{
 			Menu_SMG(client);
-		}*/
+		}
 		else
 		{
 			Retakes_Message(client, "%t", "Weapons next round");
