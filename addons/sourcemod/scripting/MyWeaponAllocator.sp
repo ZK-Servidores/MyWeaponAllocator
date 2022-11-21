@@ -788,7 +788,7 @@ void Menu_Secondary(int client)
 	menu.Display(client, MENU_TIME_FOREVER);
 }
 
-void Menu_SMG(int client)
+/* void Menu_SMG(int client)
 {
 	char sBuffer[255];
 	Menu menu = new Menu(Handler_SMG);
@@ -830,7 +830,7 @@ void Menu_SMG(int client)
 	menu.ExitButton = true;
 
 	menu.Display(client, MENU_TIME_FOREVER);
-}
+}*/
 
 public void Menu_AWP(int client)
 {
@@ -1674,22 +1674,22 @@ int GetWeaponPrice(char[] weapon)
 		return 3100;
 
 	else if (StrEqual(weapon, "weapon_m4a1_silencer"))
-		return 3100;
+		return 2900;
 
 	else if (StrEqual(weapon, "weapon_famas"))
-		return 2250;
+		return 2050;
 
 	else if (StrEqual(weapon, "weapon_aug"))
 		return 3300;
 
 	else if (StrEqual(weapon, "weapon_galilar"))
-		return 2000;
+		return 1800;
 
 	else if (StrEqual(weapon, "weapon_ak47"))
 		return 2700;
 
 	else if (StrEqual(weapon, "weapon_sg556"))
-		return 2750;
+		return 3000;
 
 	else if (StrEqual(weapon, "weapon_awp"))
 		return 4750;
@@ -1758,7 +1758,7 @@ int GetWeaponPrice(char[] weapon)
 		return 1300;
 
 	else if (StrEqual(weapon, "weapon_elite"))
-		return 400;
+		return 300;
 
 	else if (StrEqual(weapon, "weapon_hegrenade"))
 		return 300;
