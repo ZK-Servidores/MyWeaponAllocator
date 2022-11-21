@@ -689,10 +689,10 @@ void Menus_Weapons(int client)
 	{
 		Menu_Primary(client);
 	}
-	else if (gc_iMode.IntValue == 3)
+	/*else if (gc_iMode.IntValue == 3)
 	{
 		Menu_SMG(client);
-	}
+	}*/
 	else if (gc_iMode.IntValue == 4)
 	{
 		Menu_Secondary(client);
@@ -929,10 +929,10 @@ public int Handler_Secondary(Menu menu, MenuAction action, int client, int selec
 			Format (g_sSecondary_T[client], sizeof(g_sSecondary_T), sBuffer);
 		}
 
-		if (gc_iMode.IntValue < 2 || gc_iMode.IntValue == 3)
+		/*if (gc_iMode.IntValue < 2 || gc_iMode.IntValue == 3)
 		{
 			Menu_SMG(client);
-		}
+		}*/
 		else
 		{
 			Retakes_Message(client, "%t", "Weapons next round");
